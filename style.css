@@ -1,0 +1,6280 @@
+
+/* =========================================
+   CONFIGURACIÓN
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: #f3eee6;
+
+    color: #302b27;
+
+    font-family: "Poppins", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   FONDO ARTÍSTICO
+========================================= */
+
+.background-art {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -2;
+
+}
+
+
+.paint {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    
+
+    opacity: .45;
+
+}
+
+
+.paint-1 {
+
+    width: 420px;
+    height: 230px;
+
+    background: #d5a18b;
+
+    top: -100px;
+    left: -150px;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.paint-2 {
+
+    width: 300px;
+    height: 430px;
+
+    background: #aab9a3;
+
+    right: -160px;
+    bottom: -130px;
+
+    transform: rotate(35deg);
+
+}
+
+
+.paint-3 {
+
+    width: 180px;
+    height: 180px;
+
+    background: #c4a66d;
+
+    right: 15%;
+    top: 15%;
+
+    opacity: .18;
+
+}
+
+
+.paint-4 {
+
+    width: 130px;
+    height: 260px;
+
+    background: #a55f48;
+
+    left: 5%;
+    bottom: 10%;
+
+    opacity: .12;
+
+}
+
+
+/* =========================================
+   PARTÍCULAS
+========================================= */
+
+#particles {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+}
+
+
+.particle {
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #a55f48;
+
+    opacity: .35;
+
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 75px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 100;
+
+    background: rgba(243, 238, 230, .75);
+
+    backdrop-filter: none;
+
+    border-bottom: 1px solid rgba(48,43,39,.08);
+
+}
+
+
+.logo {
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 30px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.logo span {
+
+    color: #a55f48;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: #625850;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+
+}
+
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #a55f48;
+
+    left: 0;
+
+    bottom: -6px;
+
+    transition: .3s;
+
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+
+    color: #a55f48;
+
+}
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 120px 8% 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.overline {
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #81736a;
+
+    margin-bottom: 30px;
+
+    animation: aparecer 1s ease forwards;
+
+}
+
+
+.hero h1 {
+
+    font-family: "DM Serif Display", serif;
+
+    font-weight: 400;
+
+    font-size: clamp(75px, 10vw, 150px);
+
+    line-height: .82;
+
+    animation: subir 1s ease forwards;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: #a55f48;
+
+    font-style: italic;
+
+}
+
+
+.brush-line {
+
+    width: 170px;
+
+    height: 6px;
+
+    background: #a55f48;
+
+    margin: 35px 0 20px;
+
+    border-radius: 50%;
+
+    transform: rotate(-3deg);
+
+}
+
+
+.hero-subtitle {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    color: #625850;
+
+}
+
+
+.hero-subtitle strong {
+
+    color: #a55f48;
+
+}
+
+
+.hero-date {
+
+    margin-top: 12px;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #9a8a80;
+
+}
+
+
+.hero-description {
+
+    max-width: 500px;
+
+    margin-top: 30px;
+
+    color: #756960;
+
+    line-height: 1.9;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.art-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 35px;
+
+    padding: 15px 22px;
+
+    background: #302b27;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: .5px;
+
+    transition: .4s;
+
+}
+
+
+.art-button b {
+
+    font-size: 20px;
+
+    font-weight: 300;
+
+    transition: .4s;
+
+}
+
+
+.art-button:hover {
+
+    background: #a55f48;
+
+    padding-right: 30px;
+
+}
+
+
+.art-button:hover b {
+
+    transform: translateX(6px);
+
+}
+
+
+/* =========================================
+   CUADRO
+========================================= */
+
+.art-frame {
+
+    width: min(430px, 38vw);
+
+    position: relative;
+
+    animation: cuadroEntrada 1.3s ease forwards;
+
+}
+
+
+.frame-border {
+
+    padding: 16px;
+
+    background: #302b27;
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.22),
+
+        10px 10px 0 rgba(165,95,72,.25);
+
+}
+
+
+.frame-inner {
+
+    min-height: 480px;
+
+    padding: 25px;
+
+    border: 1px solid #b7aa9f;
+
+    background:
+
+        radial-gradient(circle at 30% 30%, #d6a28d55, transparent 30%),
+
+        radial-gradient(circle at 70% 70%, #aebda855, transparent 30%),
+
+        #eee5da;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+.frame-top,
+.frame-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #81736a;
+
+}
+
+
+.frame-center {
+
+    text-align: center;
+
+}
+
+
+.small-art {
+
+    font-size: 28px;
+
+    color: #a55f48;
+
+}
+
+
+.frame-center h2 {
+
+    margin-top: 20px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+}
+
+
+.mini-brush {
+
+    width: 90px;
+
+    height: 4px;
+
+    background: #a55f48;
+
+    margin: 20px auto;
+
+    border-radius: 50%;
+
+}
+
+
+.frame-center p {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    color: #625850;
+
+}
+
+
+.frame-label {
+
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.frame-label span {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #81736a;
+
+}
+
+
+.frame-label strong {
+
+    font-family: "DM Serif Display", serif;
+
+    font-weight: 400;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================
+   SCROLL
+========================================= */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.scroll-indicator span {
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color: #81736a;
+
+}
+
+
+.scroll-line {
+
+    width: 60px;
+
+    height: 1px;
+
+    background: #a55f48;
+
+}
+
+
+/* =========================================
+   TEXTO DE ESQUINA
+========================================= */
+
+.corner-text {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    writing-mode: vertical-rl;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color: #9a8a80;
+
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes subir {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(50px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes cuadroEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(80px) rotate(5deg);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0) rotate(-2deg);
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media(max-width: 850px) {
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+
+    .nav-links {
+
+        gap: 12px;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 8px;
+
+    }
+
+
+    .hero {
+
+        padding-top: 120px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        justify-content: center;
+
+        gap: 60px;
+
+    }
+
+
+    .brush-line {
+
+        margin: 30px auto 20px;
+
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .art-frame {
+
+        width: min(380px, 85vw);
+
+    }
+
+
+    .scroll-indicator {
+
+        display: none;
+
+    }
+
+
+    .corner-text {
+
+        display: none;
+
+    }
+
+}
+
+
+@media(max-width: 500px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 75px;
+
+    }
+
+
+    .frame-inner {
+
+        min-height: 400px;
+
+    }
+
+}
+
+
+/* =========================================
+   HISTORIA
+========================================= */
+
+.historia-body {
+    background: #ebe3d8;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.story-header {
+
+    min-height: 100vh;
+
+    padding: 150px 25px 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+}
+
+
+.story-header h1 {
+
+    max-width: 1000px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    font-weight: 400;
+
+    line-height: .95;
+
+}
+
+
+.story-header h1 span {
+
+    display: block;
+
+    color: #a55f48;
+
+    font-style: italic;
+
+}
+
+
+.story-header > p:last-of-type {
+
+    max-width: 550px;
+
+    margin-top: 10px;
+
+    color: #756960;
+
+    line-height: 1.8;
+
+}
+
+
+.down-arrow {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    font-size: 25px;
+
+    color: #a55f48;
+
+    animation: flecha 1.5s infinite;
+
+}
+
+
+@keyframes flecha {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline {
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    padding: 100px 0 150px;
+
+    position: relative;
+
+}
+
+
+/* Línea central */
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 2px;
+
+    background: #c4b5a8;
+
+    transform: translateX(-50%);
+
+}
+
+
+.timeline-item {
+
+    min-height: 400px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    position: relative;
+
+}
+
+
+.timeline-item.reverse {
+
+    justify-content: flex-end;
+
+}
+
+
+/* Número */
+
+.timeline-number {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #302b27;
+
+    color: #f4efe7;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 18px;
+
+    z-index: 3;
+
+    box-shadow: 0 8px 20px #00000022;
+
+}
+
+
+/* Tarjeta */
+
+.timeline-card {
+
+    width: 43%;
+
+    padding: 45px;
+
+    background: #f8f3eb;
+
+    box-shadow: 15px 20px 40px #00000018;
+
+    position: relative;
+
+    transition: .5s;
+
+}
+
+
+.timeline-card:hover {
+
+    transform: translateY(-10px) rotate(-1deg);
+
+    box-shadow: 20px 30px 50px #00000025;
+
+}
+
+
+.timeline-item.reverse .timeline-card {
+
+    transform: rotate(1deg);
+
+}
+
+
+.timeline-item.reverse .timeline-card:hover {
+
+    transform: translateY(-10px) rotate(0deg);
+
+}
+
+
+.card-label {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #a55f48;
+
+    margin-bottom: 20px;
+
+}
+
+
+.timeline-card h2 {
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+}
+
+
+.timeline-card h2 span {
+
+    display: block;
+
+    color: #a55f48;
+
+    font-style: italic;
+
+}
+
+
+.timeline-card > p:not(.card-label) {
+
+    margin-top: 25px;
+
+    color: #756960;
+
+    line-height: 1.9;
+
+    font-size: 14px;
+
+}
+
+
+.scribble {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 15px;
+
+    font-size: 35px;
+
+    color: #a55f48;
+
+    opacity: .6;
+
+}
+
+
+/* Tarjeta especial */
+
+.timeline-card.highlight {
+
+    background: #302b27;
+
+    color: #f4efe7;
+
+}
+
+
+.timeline-card.highlight .card-label {
+
+    color: #d6a28d;
+
+}
+
+
+.timeline-card.highlight > p:not(.card-label) {
+
+    color: #cfc4bb;
+
+}
+
+
+.big-one {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: -20px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 130px;
+
+    color: #a55f48;
+
+    line-height: 1;
+
+    opacity: .5;
+
+}
+
+
+/* =========================================
+   FINAL HISTORIA
+========================================= */
+
+.story-ending {
+
+    min-height: 70vh;
+
+    padding: 120px 20px;
+
+    background: #302b27;
+
+    color: #f4efe7;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.story-ending h2 {
+
+    max-width: 900px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    font-weight: 400;
+
+    line-height: .95;
+
+}
+
+
+.story-ending h2 span {
+
+    color: #d6a28d;
+
+    font-style: italic;
+
+}
+
+
+.story-ending > p:not(.overline) {
+
+    max-width: 550px;
+
+    margin-top: 30px;
+
+    color: #cfc4bb;
+
+    line-height: 1.9;
+
+}
+
+
+.story-ending .art-button {
+
+    margin-top: 45px;
+
+}
+
+
+/* =========================================
+   HISTORIA - CELULAR
+========================================= */
+
+@media(max-width: 700px) {
+
+    .story-header {
+
+        min-height: 90vh;
+
+        padding-top: 120px;
+
+    }
+
+
+    .timeline {
+
+        width: 90%;
+
+    }
+
+
+    .timeline::before {
+
+        left: 20px;
+
+    }
+
+
+    .timeline-item,
+    .timeline-item.reverse {
+
+        justify-content: flex-start;
+
+        padding-left: 60px;
+
+        min-height: 450px;
+
+    }
+
+
+    .timeline-number {
+
+        left: 20px;
+
+    }
+
+
+    .timeline-card {
+
+        width: 100%;
+
+        padding: 35px 25px;
+
+    }
+
+
+    .timeline-item.reverse .timeline-card {
+
+        transform: rotate(1deg);
+
+    }
+
+
+    .big-one {
+
+        font-size: 90px;
+
+    }
+
+}
+
+
+/* =========================================
+   RECUERDOS
+========================================= */
+
+.recuerdos-body {
+
+    background: #ded4c7;
+
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.recuerdos-header {
+
+    min-height: 65vh;
+
+    padding: 150px 25px 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.recuerdos-header h1 {
+
+    max-width: 900px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(55px, 8vw, 105px);
+
+    font-weight: 400;
+
+    line-height: .95;
+
+}
+
+
+.recuerdos-header h1 span {
+
+    display: block;
+
+    color: #a55f48;
+
+    font-style: italic;
+
+}
+
+
+.recuerdos-header > p:last-child {
+
+    max-width: 600px;
+
+    color: #756960;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================
+   PARED DE RECUERDOS
+========================================= */
+
+.memory-wall {
+
+    width: min(1200px, 90%);
+
+    min-height: 900px;
+
+    margin: 0 auto 120px;
+
+    padding: 80px;
+
+    position: relative;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 20%,
+            #c8b6a533,
+            transparent 20%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            #a55f4822,
+            transparent 25%
+        ),
+
+        #eee7dc;
+
+    box-shadow:
+
+        0 30px 80px #00000018;
+
+    border: 1px solid #cfc2b4;
+
+}
+
+
+/* textura */
+
+.memory-wall::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 20px;
+
+    border: 1px dashed #b9aa9c;
+
+    pointer-events: none;
+
+}
+
+
+.wall-title {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 50px;
+
+    right: 50px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.wall-title span {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #9a8a80;
+
+}
+
+
+.wall-title strong {
+
+    font-family: "DM Serif Display", serif;
+
+    font-weight: 400;
+
+    color: #756960;
+
+}
+
+
+/* =========================================
+   FOTOS
+========================================= */
+
+.memory-photo {
+
+    width: 270px;
+
+    background: #faf7f0;
+
+    padding: 12px 12px 45px;
+
+    position: absolute;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 20px 35px #00000022;
+
+    transition:
+
+        transform .5s ease,
+
+        box-shadow .5s ease;
+
+}
+
+
+.memory-photo:hover {
+
+    transform:
+
+        translateY(-18px)
+
+        rotate(0deg)
+
+        scale(1.05);
+
+    box-shadow:
+
+        0 30px 55px #00000030;
+
+    z-index: 20;
+
+}
+
+
+/* Posiciones */
+
+.photo-a {
+
+    top: 150px;
+
+    left: 9%;
+
+    transform: rotate(-7deg);
+
+}
+
+
+.photo-b {
+
+    top: 190px;
+
+    right: 10%;
+
+    transform: rotate(6deg);
+
+}
+
+
+.photo-c {
+
+    top: 470px;
+
+    left: 38%;
+
+    transform: rotate(-3deg);
+
+}
+
+
+.photo-d {
+
+    bottom: 60px;
+
+    left: 15%;
+
+    transform: rotate(5deg);
+
+}
+
+
+.photo-e {
+
+    bottom: 55px;
+
+    right: 14%;
+
+    transform: rotate(-6deg);
+
+}
+
+
+/* =========================================
+   CINTA
+========================================= */
+
+.tape {
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 28px;
+
+    top: -15px;
+
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-2deg);
+
+    background: #d5c39f;
+
+    opacity: .8;
+
+    z-index: 5;
+
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.photo-image {
+
+    overflow: hidden;
+
+}
+
+
+.photo-image img {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: .6s;
+
+}
+
+
+.memory-photo:hover img {
+
+    transform: scale(1.07);
+
+}
+
+
+/* =========================================
+   INFORMACIÓN
+========================================= */
+
+.photo-info {
+
+    padding: 14px 5px 0;
+
+}
+
+
+.photo-info span {
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: #a55f48;
+
+}
+
+
+.photo-info p {
+
+    margin-top: 6px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 15px;
+
+    color: #625850;
+
+}
+
+
+/* =========================================
+   MENSAJE FINAL
+========================================= */
+
+.memory-message {
+
+    min-height: 70vh;
+
+    padding: 120px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: #302b27;
+
+    color: #f4efe7;
+
+}
+
+
+.quote-mark {
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 120px;
+
+    line-height: .5;
+
+    color: #a55f48;
+
+}
+
+
+.memory-message h2 {
+
+    max-width: 850px;
+
+    margin-top: 30px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    font-weight: 400;
+
+    line-height: .95;
+
+}
+
+
+.memory-message h2 span {
+
+    display: block;
+
+    color: #d6a28d;
+
+    font-style: italic;
+
+}
+
+
+.memory-message > p {
+
+    max-width: 600px;
+
+    margin-top: 35px;
+
+    line-height: 1.9;
+
+    color: #cfc4bb;
+
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.photo-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(30,27,24,.92);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    z-index: 2000;
+
+    backdrop-filter: none;
+
+}
+
+
+.photo-modal.show {
+
+    display: flex;
+
+    animation: modalEntrada .4s ease;
+
+}
+
+
+@keyframes modalEntrada {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+.modal-content {
+
+    max-width: 850px;
+
+    width: 100%;
+
+    max-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.modal-content img {
+
+    max-width: 100%;
+
+    max-height: 70vh;
+
+    object-fit: contain;
+
+    box-shadow:
+
+        0 30px 70px #00000066;
+
+}
+
+
+.modal-text {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+}
+
+
+.modal-text span {
+
+    color: #d6a28d;
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+}
+
+
+.modal-text p {
+
+    margin-top: 8px;
+
+    color: #eee5da;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+
+}
+
+
+.close-modal {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+
+    font-weight: 200;
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media(max-width: 800px) {
+
+    .memory-wall {
+
+        min-height: auto;
+
+        padding: 80px 30px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 50px;
+
+    }
+
+
+    .wall-title {
+
+        position: relative;
+
+        top: auto;
+
+        left: auto;
+
+        right: auto;
+
+        width: 100%;
+
+    }
+
+
+    .memory-photo {
+
+        position: relative;
+
+        top: auto;
+
+        left: auto;
+
+        right: auto;
+
+        bottom: auto;
+
+        width: min(300px, 90%);
+
+        transform: rotate(0deg);
+
+    }
+
+
+    .photo-a,
+    .photo-b,
+    .photo-c,
+    .photo-d,
+    .photo-e {
+
+        transform: rotate(
+            calc(
+                -4deg + var(--random, 0deg)
+            )
+        );
+
+    }
+
+
+    .photo-image img {
+
+        height: 300px;
+
+    }
+
+}
+
+
+/* =========================================
+   PÁGINA 1 MES
+========================================= */
+
+.mes-body {
+
+    background: #302b27;
+
+    color: #f4efe7;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   FONDO
+========================================= */
+
+.celebration-bg {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+.celebrate-paint {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: none;
+
+    opacity: .35;
+
+}
+
+
+.paint-a {
+
+    width: 500px;
+
+    height: 250px;
+
+    background: #a55f48;
+
+    top: -100px;
+
+    left: -180px;
+
+    transform: rotate(-20deg);
+
+}
+
+
+.paint-b {
+
+    width: 400px;
+
+    height: 550px;
+
+    background: #aebda8;
+
+    right: -220px;
+
+    bottom: -200px;
+
+    transform: rotate(25deg);
+
+}
+
+
+.paint-c {
+
+    width: 200px;
+
+    height: 200px;
+
+    background: #d6a28d;
+
+    left: 45%;
+
+    top: 35%;
+
+    opacity: .1;
+
+}
+
+
+/* =========================================
+   NAV
+========================================= */
+
+.mes-body .navbar {
+
+    background: rgba(48,43,39,.8);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+
+
+.mes-body .logo {
+
+    color: #f4efe7;
+
+}
+
+
+.mes-body .nav-links a {
+
+    color: #cfc4bb;
+
+}
+
+
+.mes-body .nav-links a:hover,
+
+.mes-body .nav-links a.active {
+
+    color: #d6a28d;
+
+}
+
+
+.mes-body .nav-links a::after {
+
+    background: #d6a28d;
+
+}
+
+
+/* =========================================
+   CELEBRACIÓN
+========================================= */
+
+.celebration {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 130px 20px 120px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.celebration-top {
+
+    width: min(600px, 90%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 60px;
+
+}
+
+
+.celebration-top span {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #a99c93;
+
+}
+
+
+.celebration-top div {
+
+    width: 60px;
+
+    height: 1px;
+
+    background: #756960;
+
+}
+
+
+.celebration .overline {
+
+    color: #b9aaa0;
+
+}
+
+
+.celebration h1 {
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    font-weight: 400;
+
+    line-height: .9;
+
+}
+
+
+.celebration h1 span {
+
+    color: #d6a28d;
+
+    font-style: italic;
+
+    display: block;
+
+}
+
+
+/* =========================================
+   NÚMERO 1
+========================================= */
+
+.one-container {
+
+    width: 320px;
+
+    height: 300px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+}
+
+
+.circle-one {
+
+    position: absolute;
+
+    width: 260px;
+
+    height: 260px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d6a28d55;
+
+    animation: circleRotate 12s linear infinite;
+
+}
+
+
+.circle-one::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: -15px;
+
+    left: 50%;
+
+    color: #d6a28d;
+
+}
+
+
+.one {
+
+    position: relative;
+
+    z-index: 3;
+
+}
+
+
+.one span {
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 260px;
+
+    line-height: .7;
+
+    color: #a55f48;
+
+    text-shadow:
+
+        8px 8px 0 #d6a28d22;
+
+}
+
+
+.one-shadow {
+
+    position: absolute;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 260px;
+
+    line-height: .7;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px #d6a28d33;
+
+    transform: translate(25px, 20px);
+
+}
+
+
+@keyframes circleRotate {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.month-title {
+
+    margin-top: 25px;
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    color: #d6cec6;
+
+}
+
+
+.celebration-line {
+
+    width: 100px;
+
+    height: 1px;
+
+    background: #a55f48;
+
+    margin: 30px auto 50px;
+
+}
+
+
+/* =========================================
+   RAZONES
+========================================= */
+
+.reasons {
+
+    width: min(850px, 95%);
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.reason {
+
+    padding: 25px 12px;
+
+    border-top: 1px solid #756960;
+
+    border-bottom: 1px solid #756960;
+
+    transition: .4s;
+
+}
+
+
+.reason:hover {
+
+    background: #ffffff08;
+
+    transform: translateY(-8px);
+
+}
+
+
+.reason span {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #a55f48;
+
+}
+
+
+.reason p {
+
+    margin-top: 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 15px;
+
+    color: #cfc4bb;
+
+}
+
+
+/* =========================================
+   MENSAJE
+========================================= */
+
+.celebration-message {
+
+    max-width: 650px;
+
+    margin-top: 80px;
+
+}
+
+
+.celebration-message p {
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #a99c93;
+
+}
+
+
+.celebration-message strong {
+
+    display: block;
+
+    margin-top: 15px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(28px, 4vw, 45px);
+
+    font-weight: 400;
+
+    color: #f4efe7;
+
+    line-height: 1.2;
+
+}
+
+
+.mes-body .art-button {
+
+    margin-top: 50px;
+
+    background: #f4efe7;
+
+    color: #302b27;
+
+}
+
+
+.mes-body .art-button:hover {
+
+    background: #d6a28d;
+
+}
+
+
+/* =========================================
+   CONFETI
+========================================= */
+
+#confetti {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+}
+
+
+.confetti-piece {
+
+    position: absolute;
+
+    top: -20px;
+
+    width: 7px;
+
+    height: 14px;
+
+    opacity: .8;
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media(max-width: 700px) {
+
+    .celebration {
+
+        padding-top: 120px;
+
+    }
+
+
+    .celebration-top {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .celebration-top div {
+
+        width: 25px;
+
+    }
+
+
+    .one-container {
+
+        width: 250px;
+
+        height: 250px;
+
+    }
+
+
+    .one span,
+    .one-shadow {
+
+        font-size: 210px;
+
+    }
+
+
+    .circle-one {
+
+        width: 210px;
+
+        height: 210px;
+
+    }
+
+
+    .reasons {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .reason {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 20px;
+
+        text-align: left;
+
+    }
+
+
+    .reason p {
+
+        margin-top: 0;
+
+    }
+
+}
+
+
+/* =========================================
+   CARTA
+========================================= */
+
+.carta-body {
+
+    background: #e8dfd3;
+
+    color: #302b27;
+
+    overflow-x: hidden;
+
+}
+
+
+.letter-background {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -1;
+
+}
+
+
+.letter-paint {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: none;
+
+    opacity: .3;
+
+}
+
+
+.letter-paint-1 {
+
+    width: 500px;
+
+    height: 250px;
+
+    background: #a55f48;
+
+    top: -100px;
+
+    left: -180px;
+
+    transform: rotate(-20deg);
+
+}
+
+
+.letter-paint-2 {
+
+    width: 350px;
+
+    height: 500px;
+
+    background: #aebda8;
+
+    right: -170px;
+
+    bottom: -150px;
+
+    transform: rotate(20deg);
+
+}
+
+
+.letter-paint-3 {
+
+    width: 180px;
+
+    height: 180px;
+
+    background: #c4a66d;
+
+    left: 40%;
+
+    top: 30%;
+
+    opacity: .15;
+
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.letter-intro {
+
+    min-height: 65vh;
+
+    padding: 150px 20px 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.letter-intro h1 {
+
+    max-width: 900px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(55px, 8vw, 105px);
+
+    font-weight: 400;
+
+    line-height: .9;
+
+}
+
+
+.letter-intro h1 span {
+
+    display: block;
+
+    color: #a55f48;
+
+    font-style: italic;
+
+}
+
+
+.letter-intro > p:last-child {
+
+    margin-top: 5px;
+
+    color: #756960;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+
+}
+
+
+/* =========================================
+   SOBRE
+========================================= */
+
+.envelope-section {
+
+    min-height: 750px;
+
+    padding: 60px 20px 130px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.envelope-hint {
+
+    margin-bottom: 30px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #81736a;
+
+    animation: hintMove 2s infinite;
+
+}
+
+
+@keyframes hintMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+.envelope {
+
+    width: min(600px, 90vw);
+
+    height: 390px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    perspective: 1000px;
+
+    filter: drop-shadow(
+        0 30px 30px rgba(0,0,0,.2)
+    );
+
+}
+
+
+/* Parte trasera */
+
+
+
+/* Papel */
+
+.letter-paper {
+
+    position: absolute;
+
+    width: 88%;
+
+    height: 90%;
+
+    left: 6%;
+
+    top: 5%;
+
+    padding: 35px;
+
+    background: #faf6ee;
+
+    z-index: 2;
+
+    box-shadow:
+        0 10px 25px #00000020;
+
+    transition:
+        transform 1s ease;
+
+    
+
+}
+
+
+.envelope.open .letter-paper {
+
+    transform:
+        translateY(-300px);
+
+    z-index: 20;
+
+}
+
+
+.letter-decoration {
+
+    text-align: center;
+
+    color: #a55f48;
+
+    font-size: 25px;
+
+}
+
+
+.letter-small {
+
+    margin-top: 8px;
+
+    text-align: center;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color: #81736a;
+
+}
+
+
+.letter-paper h2 {
+
+    text-align: center;
+
+    margin-top: 8px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 45px;
+
+    font-weight: 400;
+
+    color: #a55f48;
+
+}
+
+
+.letter-date {
+
+    text-align: center;
+
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #9a8a80;
+
+}
+
+
+.letter-line {
+
+    width: 70px;
+
+    height: 2px;
+
+    margin: 20px auto;
+
+    background: #a55f48;
+
+}
+
+
+.letter-text {
+
+    max-width: 470px;
+
+    margin: auto;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #625850;
+
+}
+
+
+.letter-text p {
+
+    margin-bottom: 16px;
+
+}
+
+
+.letter-signature {
+
+    margin-top: 30px;
+
+    text-align: right;
+
+    font-family: "Playfair Display", serif;
+
+}
+
+
+.letter-signature span {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #81736a;
+
+}
+
+
+.letter-signature strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 22px;
+
+    color: #a55f48;
+
+}
+
+
+/* =========================================
+   FRENTE DEL SOBRE
+========================================= */
+
+.envelope-front {
+
+    .envelope-front {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 6;
+
+    background: #b46e55;
+
+    clip-path: polygon(
+        0 0,
+        50% 55%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    border-radius: 5px;
+
+}
+}
+
+
+/* =========================================
+   SOLAPA
+========================================= */
+
+.envelope-flap {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 60%;
+
+    z-index: 7;
+
+    background: #9d5a44;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+
+    transform-origin: top;
+
+    transition:
+        transform 1s ease;
+
+}
+
+
+.envelope.open .envelope-flap {
+
+    transform:
+        rotateX(180deg);
+
+    z-index: 1;
+
+}
+
+
+/* =========================================
+   SELLO
+========================================= */
+
+.seal {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 65%;
+
+    transform: translate(-50%, -50%);
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #302b27;
+
+    color: #d6a28d;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 5px 15px #00000033;
+
+    transition: .4s;
+
+}
+
+
+.envelope:hover .seal {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.1);
+
+}
+
+
+/* =========================================
+   CERRAR CARTA
+========================================= */
+
+.close-letter {
+
+    margin-top: 300px;
+
+    padding: 13px 25px;
+
+    border: 1px solid #a55f48;
+
+    background: transparent;
+
+    color: #a55f48;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: .5s;
+
+}
+
+
+.envelope-section.letter-open .close-letter {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final-message {
+
+    min-height: 75vh;
+
+    padding: 120px 20px;
+
+    background: #302b27;
+
+    color: #f4efe7;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.final-star {
+
+    color: #d6a28d;
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.final-message h2 {
+
+    font-family: "DM Serif Display", serif;
+
+    font-weight: 400;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    line-height: .95;
+
+}
+
+
+.final-message h2 span {
+
+    display: block;
+
+    color: #d6a28d;
+
+    font-style: italic;
+
+}
+
+
+.final-message > p:not(.overline) {
+
+    max-width: 500px;
+
+    margin-top: 30px;
+
+    color: #cfc4bb;
+
+    line-height: 1.8;
+
+}
+
+
+.final-date {
+
+    margin-top: 25px;
+
+    letter-spacing: 5px;
+
+    font-size: 10px;
+
+    color: #a99c93;
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media(max-width: 650px) {
+
+    .envelope {
+
+        height: 280px;
+
+    }
+
+
+    .letter-paper {
+
+        padding: 20px;
+
+    }
+
+
+    .envelope.open .letter-paper {
+
+        transform:
+            translateY(-190px);
+
+    }
+
+
+    .letter-paper h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .letter-text {
+
+        font-size: 13px;
+
+    }
+
+
+    .seal {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+
+    .close-letter {
+
+        margin-top: 240px;
+
+    }
+
+}
+
+.envelope.open .envelope-front {
+    z-index: 4;
+}
+
+.envelope.open .letter-paper {
+    z-index: 10;
+    transform: translateY(-260px);
+}
+/* =========================================
+   CORRECCIÓN FINAL - SOBRE
+========================================= */
+
+.envelope {
+    position: relative;
+    overflow: visible;
+    perspective: 1200px;
+}
+
+
+/* CARTA */
+
+.envelope .letter-paper {
+
+    position: absolute;
+
+    width: 88%;
+    height: 90%;
+
+    left: 6%;
+    top: 5%;
+
+    z-index: 3;
+
+    background: #faf6ee;
+
+    transition:
+        transform 1s cubic-bezier(.2,.8,.2,1),
+        box-shadow 1s ease;
+
+}
+
+
+/* FRENTE DEL SOBRE */
+
+.envelope .envelope-front {
+
+    z-index: 6;
+
+}
+
+
+/* SOLAPA CERRADA */
+
+.envelope .envelope-flap {
+
+    z-index: 8;
+
+    transform-origin: top center;
+
+    transition:
+        transform 1s cubic-bezier(.2,.8,.2,1),
+        opacity .3s ease .7s;
+
+    backface-visibility: hidden;
+
+}
+
+
+/* =========================================
+   SOBRE ABIERTO
+========================================= */
+
+.envelope.open .letter-paper {
+
+    z-index: 20;
+
+    transform:
+        translateY(-300px);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.25);
+
+}
+
+
+/* La solapa se abre y queda detrás */
+
+.envelope.open .envelope-flap {
+
+    transform:
+        rotateX(180deg);
+
+    z-index: 2;
+
+    opacity: .2;
+
+}
+
+
+/* El frente queda detrás de la carta */
+
+.envelope.open .envelope-front {
+
+    z-index: 4;
+
+}
+
+
+/* La parte trasera */
+
+.envelope.open .envelope-back {
+
+    z-index: 1;
+
+}
+
+
+/* =========================================
+   SELLO
+========================================= */
+
+.envelope .seal {
+
+    z-index: 10;
+
+    transition:
+        transform .6s ease,
+        opacity .4s ease;
+
+}
+
+
+.envelope.open .seal {
+
+    transform:
+        translate(-50%, -50%)
+        scale(.7);
+
+    opacity: 0;
+
+}
+
+
+/* =========================================
+   BOTÓN CERRAR
+========================================= */
+
+.envelope-section.letter-open .close-letter {
+
+    margin-top: 340px;
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media(max-width:650px) {
+
+    .envelope {
+
+        width: 90vw;
+
+        height: 280px;
+
+    }
+
+
+    .envelope.open .letter-paper {
+
+        transform:
+            translateY(-210px);
+
+    }
+
+
+    .envelope-section.letter-open .close-letter {
+
+        margin-top: 250px;
+
+    }
+
+}
+/* =====================================================
+   CARTA - SOLUCIÓN DEFINITIVA
+===================================================== */
+
+/* Cuando la carta está abierta, oscurecemos el fondo */
+.envelope-section:has(.envelope.open)::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 30, 27, 0.75);
+    backdrop-filter: none;
+    z-index: 9000;
+}
+
+
+/* La carta se convierte en una ventana grande */
+.envelope.open .letter-paper {
+
+    position: fixed !important;
+
+    top: 50% !important;
+    left: 50% !important;
+
+    width: min(700px, 88vw) !important;
+    height: min(78vh, 760px) !important;
+
+    margin: 0 !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    z-index: 9999 !important;
+
+    padding: 45px !important;
+
+    background: #faf6ee;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.45);
+
+    animation: cartaAparecer .8s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+/* Animación de entrada */
+
+@keyframes cartaAparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -40%)
+            scale(.75) !important;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1) !important;
+
+    }
+
+}
+
+
+/* Todo el sobre queda detrás */
+
+.envelope.open .envelope-back {
+
+    z-index: 1 !important;
+
+}
+
+
+.envelope.open .envelope-front {
+
+    z-index: 2 !important;
+
+}
+
+
+.envelope.open .envelope-flap {
+
+    z-index: 3 !important;
+
+    opacity: 0 !important;
+
+}
+
+
+.envelope.open .seal {
+
+    opacity: 0 !important;
+
+}
+
+
+/* El botón de cerrar aparece por encima */
+
+.envelope-section.letter-open .close-letter {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10000;
+
+    margin: 0 !important;
+
+    background: #faf6ee;
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media(max-width:650px) {
+
+    .envelope.open .letter-paper {
+
+        width: 88vw !important;
+
+        height: 78vh !important;
+
+        padding: 25px !important;
+
+    }
+
+
+    .letter-paper h2 {
+
+        font-size: 36px !important;
+
+    }
+
+
+    .letter-text {
+
+        font-size: 14px !important;
+
+        line-height: 1.7;
+
+    }
+
+}
+/* =========================================
+   FUENTES Y CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    background: #f8f5f1;
+    color: #4b3934;
+}
+
+.carta-body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   FONDO
+========================================= */
+
+.letter-background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+    background: #f8f5f1;
+}
+
+.letter-paint {
+    position: absolute;
+    border-radius: 50%;
+    filter: none;
+    opacity: 0.45;
+}
+
+.letter-paint-1 {
+    width: 430px;
+    height: 180px;
+    background: #d9c5bb;
+    top: 80px;
+    left: -180px;
+    transform: rotate(-15deg);
+}
+
+.letter-paint-2 {
+    width: 300px;
+    height: 130px;
+    background: #e4d5cd;
+    right: -120px;
+    top: 400px;
+    transform: rotate(25deg);
+}
+
+.letter-paint-3 {
+    width: 350px;
+    height: 150px;
+    background: #eaded7;
+    left: 20%;
+    bottom: -70px;
+    transform: rotate(-10deg);
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(248, 245, 241, 0.9);
+    border-bottom: 1px solid rgba(100, 70, 60, 0.08);
+
+    position: relative;
+    z-index: 20;
+}
+
+.logo {
+    font-family: "DM Serif Display", serif;
+    font-size: 31px;
+    color: #3d2925;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #a14f3e;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6e5b54;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a14f3e;
+}
+
+.nav-links a.active {
+    color: #a14f3e;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+
+    height: 1px;
+    background: #a14f3e;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.letter-intro {
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 45px;
+}
+
+.overline {
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #9a8178;
+    margin-bottom: 22px;
+}
+
+.letter-intro h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #44312d;
+}
+
+.letter-intro h1 span {
+    display: block;
+    color: #a14f3e;
+    font-style: italic;
+}
+
+.brush-line {
+    width: 145px;
+    height: 4px;
+    background: #a14f3e;
+
+    margin: 28px auto;
+
+    border-radius: 50%;
+    transform: rotate(-2deg);
+
+    opacity: 0.85;
+}
+
+.letter-intro > p:last-child {
+    font-size: 16px;
+    color: #6f5d56;
+}
+
+
+/* =========================================
+   SECCIÓN DEL SOBRE
+========================================= */
+
+.envelope-section {
+    width: 100%;
+    min-height: 650px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px 20px 90px;
+}
+
+.envelope-hint {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+    letter-spacing: 4px;
+
+    color: #9a8178;
+
+    margin-bottom: 28px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   SOBRE
+========================================= */
+
+.envelope {
+    position: relative;
+
+    width: 560px;
+    height: 365px;
+
+    max-width: 92vw;
+
+    cursor: pointer;
+
+    perspective: 1200px;
+
+    filter: drop-shadow(0 18px 25px rgba(61, 41, 35, 0.16));
+
+    transition: transform 0.4s ease;
+}
+
+.envelope:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   PARTE TRASERA
+========================================= */
+
+.envelope-back {
+    position: absolute;
+
+    inset: 0;
+
+    background: #a8513f;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   PAPEL DE LA CARTA
+========================================= */
+
+.letter-paper {
+    position: absolute;
+
+    left: 35px;
+    right: 35px;
+
+    bottom: 18px;
+
+    height: 325px;
+
+    background: #fffdfa;
+
+    padding: 35px 45px;
+
+    z-index: 2;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+
+    transition:
+        transform 0.9s ease,
+        bottom 0.9s ease;
+}
+
+
+/* =========================================
+   DECORACIÓN CARTA
+========================================= */
+
+.letter-decoration {
+    font-size: 18px;
+    color: #a8513f;
+    margin-bottom: 5px;
+}
+
+.letter-small {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    color: #9a8178;
+
+    margin-bottom: 7px;
+}
+
+.letter-paper h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 32px;
+    font-weight: 400;
+
+    color: #503934;
+
+    margin-bottom: 5px;
+}
+
+.letter-date {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #a4867b;
+
+    margin-bottom: 15px;
+}
+/* =========================================
+   SOBRE
+========================================= */
+
+.envelope {
+    position: relative;
+    width: 560px;
+    height: 360px;
+    max-width: 92vw;
+    margin: 0 auto;
+
+    cursor: pointer;
+    perspective: 1200px;
+
+    filter: drop-shadow(0 18px 25px rgba(50, 30, 25, 0.18));
+
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   PARTE TRASERA DEL SOBRE
+========================================= */
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+
+    background: #a95340;
+
+    border-radius: 2px;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CARTA QUE ESTÁ DENTRO
+========================================= */
+
+.letter-paper {
+    position: absolute;
+
+    left: 35px;
+    right: 35px;
+
+    bottom: 20px;
+
+    width: auto;
+    height: 325px;
+
+    padding: 35px 42px;
+
+    background: #fffdf9;
+
+    border: 1px solid rgba(90, 60, 50, 0.08);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    overflow-y: auto;
+
+    text-align: center;
+
+    z-index: 2;
+
+    /*
+       La carta empieza escondida
+       dentro del sobre.
+    */
+    transform: translateY(0);
+
+    transition:
+        transform 0.9s cubic-bezier(.22,.61,.36,1),
+        z-index 0s linear 0.45s;
+}
+
+
+/* =========================================
+   PARTE FRONTAL DEL SOBRE
+========================================= */
+
+.envelope-front {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 205px;
+
+    background: #b45b47;
+
+    /*
+       Forma de la parte frontal:
+    */
+
+    clip-path: polygon(
+        0 0,
+        50% 62%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    z-index: 4;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   SOLAPA DEL SOBRE
+========================================= */
+
+.envelope-flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 220px;
+
+    background: #a95340;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+
+    transform-origin: top center;
+
+    z-index: 6;
+
+    transition:
+        transform 0.9s cubic-bezier(.22,.61,.36,1),
+        z-index 0s linear 0.45s;
+
+    transform-style: preserve-3d;
+}
+
+
+/* =========================================
+   SELLO AR
+========================================= */
+
+.seal {
+    position: absolute;
+
+    left: 50%;
+    top: 112px;
+
+    transform: translateX(-50%);
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: #080706;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #e2c5ba;
+
+    font-family: "DM Serif Display", serif;
+    font-size: 16px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.25);
+
+    z-index: 10;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* =========================================
+   SOBRE ABIERTO
+========================================= */
+
+/*
+   La solapa sube y se abre.
+*/
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+
+    z-index: 1;
+}
+
+
+/*
+   El sello desaparece cuando la solapa
+   se abre para que no quede flotando.
+*/
+
+.envelope.open .seal {
+    opacity: 0;
+}
+
+
+/*
+   AQUÍ ESTÁ LO IMPORTANTE:
+
+   La carta sale completamente
+   hacia arriba y queda por delante
+   del sobre.
+*/
+
+.envelope.open .letter-paper {
+    transform: translateY(-270px);
+
+    z-index: 8;
+
+    transition:
+        transform 0.9s cubic-bezier(.22,.61,.36,1),
+        z-index 0s;
+}
+
+
+/* =========================================
+   TEXTO DE LA CARTA
+========================================= */
+
+.letter-paper .letter-decoration {
+    font-size: 20px;
+    color: #a95340;
+
+    margin-bottom: 8px;
+}
+
+.letter-paper .letter-small {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #94766d;
+
+    margin-bottom: 8px;
+}
+
+.letter-paper h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    color: #4c3630;
+
+    margin-bottom: 5px;
+}
+
+.letter-paper .letter-date {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #a17f75;
+
+    margin-bottom: 15px;
+}
+
+.letter-line {
+    width: 70px;
+    height: 1px;
+
+    margin: 0 auto 22px;
+
+    background: #b87564;
+}
+
+
+/* =========================================
+   PÁRRAFOS
+========================================= */
+
+.letter-text {
+    text-align: left;
+}
+
+.letter-text p {
+    font-family: "Playfair Display", serif;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+    color: #5d4b45;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================
+   FIRMA
+========================================= */
+
+.letter-signature {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    margin-top: 30px;
+
+    padding-bottom: 15px;
+}
+
+.letter-signature span {
+    font-size: 11px;
+
+    font-style: italic;
+
+    color: #806c65;
+}
+
+.letter-signature strong {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    color: #a95340;
+}
+
+
+/* =========================================
+   BOTÓN CERRAR
+========================================= */
+
+.close-letter {
+    margin-top: 45px;
+
+    padding: 12px 28px;
+
+    background: transparent;
+
+    border: 1px solid #a95340;
+
+    color: #87594e;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+}
+
+.close-letter.show {
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+.close-letter:hover {
+    background: #a95340;
+
+    color: white;
+}
+
+
+/* =========================================
+   SCROLL DE LA CARTA
+========================================= */
+
+.letter-paper::-webkit-scrollbar {
+    width: 4px;
+}
+
+.letter-paper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.letter-paper::-webkit-scrollbar-thumb {
+    background: #c79b8e;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .envelope {
+        width: 94vw;
+        height: 300px;
+    }
+
+    .envelope-flap {
+        height: 185px;
+    }
+
+    .envelope-front {
+        height: 170px;
+    }
+
+    .seal {
+        width: 52px;
+        height: 52px;
+
+        top: 95px;
+    }
+
+    .letter-paper {
+        left: 20px;
+        right: 20px;
+
+        height: 270px;
+
+        padding: 25px 23px;
+    }
+
+    .envelope.open .letter-paper {
+        transform: translateY(-210px);
+    }
+
+    .letter-paper h2 {
+        font-size: 27px;
+    }
+
+    .letter-text p {
+        font-size: 12px;
+
+        line-height: 1.65;
+    }
+}
+/* =========================================
+   SOBRE
+========================================= */
+
+.envelope {
+    position: relative;
+    width: 560px;
+    height: 360px;
+    max-width: 92vw;
+    margin: 0 auto;
+
+    cursor: pointer;
+    perspective: 1200px;
+
+    filter: drop-shadow(0 18px 25px rgba(50, 30, 25, 0.18));
+
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   BASE DEL SOBRE
+========================================= */
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+
+    background: #a95340;
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   CARTA
+========================================= */
+
+.letter-paper {
+    position: absolute;
+
+    left: 35px;
+    right: 35px;
+    bottom: 18px;
+
+    height: 325px;
+
+    padding: 35px 42px;
+
+    background: #fffdf9;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    overflow-y: auto;
+
+    text-align: center;
+
+    /*
+       IMPORTANTE:
+       queda detrás del sobre cuando está cerrado.
+    */
+    z-index: 2;
+
+    transform: translateY(0);
+
+    transition:
+        transform 0.9s cubic-bezier(.22,.61,.36,1);
+}
+
+
+/* =========================================
+   PARTE FRONTAL
+========================================= */
+
+.envelope-front {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 205px;
+
+    background: #b45b47;
+
+    clip-path: polygon(
+        0 0,
+        50% 62%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   SOLAPA
+========================================= */
+
+.envelope-flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 220px;
+
+    background: #a95340;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+
+    transform-origin: top center;
+
+    transform-style: preserve-3d;
+
+    z-index: 7;
+
+    transition:
+        transform 0.9s cubic-bezier(.22,.61,.36,1);
+}
+
+
+/* =========================================
+   SELLO
+========================================= */
+
+.seal {
+    position: absolute;
+
+    left: 50%;
+    top: 112px;
+
+    transform: translateX(-50%);
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: #080706;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #e2c5ba;
+
+    font-family: "DM Serif Display", serif;
+    font-size: 16px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+
+    z-index: 10;
+
+    transition: opacity .3s ease;
+}
+
+
+/* =========================================
+   CUANDO SE ABRE
+========================================= */
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+
+    z-index: 1;
+}
+
+
+/*
+   Al abrir:
+   la carta pasa por encima
+   de todas las partes del sobre.
+*/
+
+.envelope.open .letter-paper {
+    transform: translateY(-275px);
+
+    z-index: 20;
+}
+
+
+/*
+   El sello desaparece.
+*/
+
+.envelope.open .seal {
+    opacity: 0;
+}
+/* ==========================================
+   CORRECCIÓN FINAL DEL SOBRE
+   DEJAR ESTO AL FINAL DEL CSS
+========================================== */
+
+.envelope {
+    position: relative !important;
+    width: 560px !important;
+    height: 360px !important;
+    overflow: visible !important;
+}
+
+
+/* CARTA: OCULTA DETRÁS DEL SOBRE */
+.envelope .letter-paper {
+    position: absolute !important;
+
+    left: 35px !important;
+    right: 35px !important;
+    bottom: 18px !important;
+
+    width: auto !important;
+    height: 325px !important;
+
+    background: #fffdf9 !important;
+
+    z-index: 1 !important;
+
+    transform: translateY(0) !important;
+
+    overflow-y: auto !important;
+}
+
+
+/* BASE DEL SOBRE */
+.envelope .envelope-back {
+    position: absolute !important;
+    inset: 0 !important;
+
+    background: #a95340 !important;
+
+    z-index: 3 !important;
+}
+
+
+/* PARTE FRONTAL */
+.envelope .envelope-front {
+    position: absolute !important;
+
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100% !important;
+    height: 205px !important;
+
+    background: #b45b47 !important;
+
+    clip-path: polygon(
+        0 0,
+        50% 62%,
+        100% 0,
+        100% 100%,
+        0 100%
+    ) !important;
+
+    z-index: 5 !important;
+}
+
+
+/* SOLAPA */
+.envelope .envelope-flap {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 220px !important;
+
+    background: #a95340 !important;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    ) !important;
+
+    transform-origin: top center !important;
+
+    z-index: 7 !important;
+
+    transition: transform .8s ease !important;
+}
+
+
+/* SELLO */
+.envelope .seal {
+    position: absolute !important;
+
+    top: 112px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 58px !important;
+    height: 58px !important;
+
+    border-radius: 50% !important;
+
+    background: #080706 !important;
+
+    z-index: 10 !important;
+}
+
+
+/* ==========================================
+   ABIERTO
+========================================== */
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg) !important;
+    z-index: 1 !important;
+}
+
+
+.envelope.open .letter-paper {
+    transform: translateY(-285px) !important;
+    z-index: 20 !important;
+}
+
+
+.envelope.open .seal {
+    opacity: 0 !important;
+}
+
+
+/* ==========================================
+   BOTÓN CERRAR
+========================================== */
+
+.close-letter.show {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .envelope {
+        width: 94vw !important;
+        height: 300px !important;
+    }
+
+    .envelope .letter-paper {
+        left: 20px !important;
+        right: 20px !important;
+        height: 270px !important;
+    }
+
+    .envelope.open .letter-paper {
+        transform: translateY(-225px) !important;
+    }
+}
+/* =====================================================
+   SOBRE - DISEÑO FINAL
+   PEGAR AL FINAL DE style.css
+===================================================== */
+
+.envelope {
+    position: relative !important;
+
+    width: 560px !important;
+    height: 360px !important;
+
+    max-width: 92vw !important;
+    margin: 0 auto !important;
+
+    cursor: pointer !important;
+
+    overflow: visible !important;
+
+    filter: drop-shadow(
+        0 15px 20px rgba(50, 30, 25, 0.16)
+    ) !important;
+
+    transform: none !important;
+}
+
+
+/* =====================================================
+   PARTE TRASERA
+===================================================== */
+
+.envelope-back {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background: #a9513e !important;
+
+    z-index: 3 !important;
+}
+
+
+/* =====================================================
+   CARTA
+===================================================== */
+
+.envelope .letter-paper {
+    position: absolute !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    bottom: 18px !important;
+
+    width: 490px !important;
+    height: 420px !important;
+
+    padding: 32px 40px !important;
+
+    background: #fffdf9 !important;
+
+    border: 1px solid rgba(80, 55, 45, 0.08) !important;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.12) !important;
+
+    transform:
+        translateX(-50%)
+        translateY(0) !important;
+
+    z-index: 2 !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    opacity: 1 !important;
+
+    filter: none !important;
+
+    text-align: center !important;
+
+    transition:
+        transform 0.8s ease !important;
+}
+
+
+/* =====================================================
+   PARTE FRONTAL DEL SOBRE
+===================================================== */
+
+.envelope-front {
+    position: absolute !important;
+
+    left: 0 !important;
+    bottom: 0 !important;
+
+    width: 100% !important;
+    height: 205px !important;
+
+    background: #b45a46 !important;
+
+    clip-path: polygon(
+        0 0,
+        50% 63%,
+        100% 0,
+        100% 100%,
+        0 100%
+    ) !important;
+
+    z-index: 5 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* =====================================================
+   SOLAPA SUPERIOR
+===================================================== */
+
+.envelope-flap {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 220px !important;
+
+    background: #a9513e !important;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    ) !important;
+
+    z-index: 8 !important;
+
+    /*
+       IMPORTANTE:
+       Ya NO usamos rotateX.
+       Esto evita que el texto se vea borroso.
+    */
+
+    transform: translateY(0) !important;
+
+    transition:
+        transform 0.8s ease !important;
+}
+
+
+/* =====================================================
+   SELLO AR
+===================================================== */
+
+.envelope .seal {
+    position: absolute !important;
+
+    top: 112px !important;
+    left: 50% !important;
+
+    width: 58px !important;
+    height: 58px !important;
+
+    transform: translateX(-50%) !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #080706 !important;
+
+    color: #e2c5ba !important;
+
+    font-family: "DM Serif Display", serif !important;
+
+    font-size: 16px !important;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.25) !important;
+
+    z-index: 10 !important;
+
+    opacity: 1 !important;
+
+    filter: none !important;
+
+    transition:
+        opacity 0.3s ease !important;
+}
+
+
+/* =====================================================
+   AL ABRIR EL SOBRE
+===================================================== */
+
+/* La solapa sube */
+
+.envelope.open .envelope-flap {
+    transform: translateY(-225px) !important;
+
+    z-index: 1 !important;
+}
+
+
+/* El sello desaparece */
+
+.envelope.open .seal {
+    opacity: 0 !important;
+}
+
+
+/* La carta sale CENTRADA */
+
+.envelope.open .letter-paper {
+    left: 50% !important;
+
+    width: 490px !important;
+    height: 420px !important;
+
+    transform:
+        translateX(-50%)
+        translateY(-275px) !important;
+
+    z-index: 20 !important;
+
+    opacity: 1 !important;
+
+    filter: none !important;
+}
+
+
+/* =====================================================
+   TEXTO DE LA CARTA
+===================================================== */
+
+.letter-paper .letter-decoration {
+    color: #a9513e !important;
+
+    font-size: 20px !important;
+
+    margin-bottom: 7px !important;
+}
+
+.letter-paper .letter-small {
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 9px !important;
+
+    letter-spacing: 3px !important;
+
+    color: #94776e !important;
+
+    margin-bottom: 7px !important;
+}
+
+.letter-paper h2 {
+    font-family: "DM Serif Display", serif !important;
+
+    font-size: 31px !important;
+
+    font-weight: 400 !important;
+
+    color: #4b3630 !important;
+
+    margin-bottom: 5px !important;
+}
+
+.letter-paper .letter-date {
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 9px !important;
+
+    letter-spacing: 2px !important;
+
+    color: #9c7c73 !important;
+
+    margin-bottom: 14px !important;
+}
+
+.letter-paper .letter-line {
+    width: 70px !important;
+    height: 1px !important;
+
+    margin: 0 auto 20px !important;
+
+    background: #b77767 !important;
+}
+
+
+/* =====================================================
+   PÁRRAFOS
+===================================================== */
+
+.letter-paper .letter-text {
+    text-align: left !important;
+}
+
+.letter-paper .letter-text p {
+    font-family: "Playfair Display", serif !important;
+
+    font-size: 12.5px !important;
+
+    line-height: 1.65 !important;
+
+    color: #594943 !important;
+
+    margin-bottom: 14px !important;
+
+    opacity: 1 !important;
+
+    filter: none !important;
+}
+
+
+/* =====================================================
+   FIRMA
+===================================================== */
+
+.letter-paper .letter-signature {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: flex-end !important;
+
+    margin-top: 22px !important;
+
+    padding-bottom: 10px !important;
+}
+
+.letter-paper .letter-signature span {
+    font-size: 11px !important;
+
+    font-style: italic !important;
+
+    color: #806c65 !important;
+}
+
+.letter-paper .letter-signature strong {
+    font-family: "DM Serif Display", serif !important;
+
+    font-size: 18px !important;
+
+    color: #a9513e !important;
+}
+
+
+/* =====================================================
+   BOTÓN CERRAR
+===================================================== */
+
+.close-letter {
+    margin-top: 45px !important;
+
+    padding: 11px 25px !important;
+
+    background: transparent !important;
+
+    border: 1px solid #a9513e !important;
+
+    color: #87594e !important;
+
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 11px !important;
+
+    cursor: pointer !important;
+
+    opacity: 0 !important;
+
+    pointer-events: none !important;
+
+    transition: 0.3s ease !important;
+}
+
+.close-letter.show {
+    opacity: 1 !important;
+
+    pointer-events: auto !important;
+}
+
+
+/* =====================================================
+   QUITAR CUALQUIER EFECTO BORROSO
+===================================================== */
+
+.envelope,
+.envelope *,
+.letter-paper,
+.letter-paper * {
+    filter: none !important;
+
+    backdrop-filter: none !important;
+
+    -webkit-font-smoothing: antialiased !important;
+
+    text-rendering: optimizeLegibility !important;
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .envelope {
+        width: 94vw !important;
+        height: 300px !important;
+    }
+
+    .envelope .letter-paper {
+        width: calc(100% - 40px) !important;
+
+        height: 350px !important;
+
+        padding: 25px 25px !important;
+    }
+
+    .envelope-flap {
+        height: 185px !important;
+    }
+
+    .envelope-front {
+        height: 170px !important;
+    }
+
+    .envelope .seal {
+        top: 95px !important;
+
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    .envelope.open .letter-paper {
+        width: calc(100% - 30px) !important;
+
+        height: 350px !important;
+
+        transform:
+            translateX(-50%)
+            translateY(-220px) !important;
+    }
+
+    .letter-paper .letter-text p {
+        font-size: 11.5px !important;
+
+        line-height: 1.6 !important;
+    }
+}
+/* =========================================
+   QUITAR BORROSIDAD DE TODA LA PÁGINA
+========================================= */
+
+html,
+body,
+.carta-body {
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+}
+
+.letter-background,
+.navbar,
+.letter-intro,
+.envelope-section,
+.envelope,
+.final-message {
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+}
+
+/* Elementos del sobre */
+
+.envelope,
+.envelope-back,
+.envelope-front,
+.envelope-flap,
+.letter-paper,
+.seal {
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Texto */
+
+h1,
+h2,
+p,
+a,
+span,
+strong,
+button {
+    filter: none !important;
+    opacity: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+/* QUITAR DESENFOQUE */
+
+html,
+body {
+    filter: none !important;
+    -webkit-filter: none !important;
+    backdrop-filter: none !important;
+}
+
+.carta-body {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+}
+
+.letter-background {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+.navbar,
+.letter-intro,
+.envelope-section,
+.envelope,
+.final-message {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+}
+
+.envelope-back,
+.envelope-front,
+.envelope-flap,
+.letter-paper,
+.seal {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+/* QUITAR DESENFOQUE */
+
+html,
+body {
+    filter: none !important;
+    -webkit-filter: none !important;
+    backdrop-filter: none !important;
+}
+
+.carta-body {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+}
+
+.letter-background {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+.navbar,
+.letter-intro,
+.envelope-section,
+.envelope,
+.final-message {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+}
+
+.envelope-back,
+.envelope-front,
+.envelope-flap,
+.letter-paper,
+.seal {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+/* ===== CARTA ABIERTA ===== */
+
+/* ===== CARTA ABIERTA: NÍTIDA Y FUNCIONAL ===== */
+
+/* ===== MODAL DE LA CARTA ===== */
+
+.photo-modal {
+    position: fixed !important;
+    inset: 0 !important;
+
+    display: none;
+    align-items: flex-start !important;
+    justify-content: center !important;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 30px 20px !important;
+    box-sizing: border-box;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    filter: none !important;
+    backdrop-filter: none !important;
+
+    pointer-events: auto !important;
+    touch-action: pan-y !important;
+
+    z-index: 2000 !important;
+}
+
+.photo-modal.show {
+    display: flex !important;
+    pointer-events: auto !important;
+}
+
+/* ===== CONTENIDO REAL DE LA CARTA ===== */
+
+.photo-modal .modal-content {
+    position: relative;
+
+    width: min(900px, 100%);
+    max-width: 900px;
+
+    max-height: none !important;
+    height: auto !important;
+
+    overflow: visible !important;
+
+    margin: 20px auto 60px;
+
+    filter: none !important;
+    backdrop-filter: none !important;
+
+    pointer-events: auto !important;
+}
+
+/* ===== IMAGEN / CARTA ===== */
+
+.photo-modal .modal-content img {
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+
+    filter: none !important;
+
+    pointer-events: auto !important;
+}
+
+/* ===== BOTÓN CERRAR ===== */
+
+.photo-modal .close-modal {
+    position: relative;
+    z-index: 3000 !important;
+
+    pointer-events: auto !important;
+    cursor: pointer !important;
+
+    touch-action: manipulation !important;
+}
+/* =================================
+   CARTA: SCROLL Y CLICS
+   ================================= */
+
+.photo-modal {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* Sin desenfoque */
+    filter: none !important;
+    backdrop-filter: none !important;
+
+    z-index: 2000;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.photo-modal.show {
+    display: flex;
+}
+
+/* CONTENIDO DE LA CARTA */
+.photo-modal .modal-content {
+    width: min(900px, 100%);
+
+    margin: 20px auto 60px;
+
+    /* Scroll interno */
+    max-height: 85vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+
+    filter: none !important;
+    backdrop-filter: none !important;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* IMAGEN */
+.photo-modal .modal-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    filter: none !important;
+}
+
+/* BOTONES */
+.photo-modal button,
+.photo-modal a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    touch-action: manipulation;
+    position: relative;
+    z-index: 3000;
+}
+.photo-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.photo-modal.show {
+    display: flex;
+    pointer-events: auto;
+}
+
+.modal-content {
+    position: relative;
+    z-index: 2001;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    z-index: 2002;
+    pointer-events: auto;
+    cursor: pointer;
+}
+/* ===== ARREGLO DE BOTONES DE LA CARTA ===== */
+
+.envelope-section,
+.envelope-section * {
+    pointer-events: auto;
+}
+
+.envelope-section {
+    position: relative;
+    z-index: 1000;
+}
+
+#envelope {
+    position: relative;
+    z-index: 1001;
+}
+
+.envelope-section button,
+.envelope-section a {
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto !important;
+    cursor: pointer;
+}
+
+/* El visor de fotos no debe bloquear la página cuando está cerrado */
+.photo-modal {
+    pointer-events: none;
+}
+
+.photo-modal.show {
+    pointer-events: auto;
+}
+
+.close-modal {
+    pointer-events: auto !important;
+    z-index: 10000;
+}
+/* ===== SCROLL DE LA CARTA ===== */
+
+.envelope-section {
+    overflow: visible !important;
+}
+
+.envelope {
+    overflow: visible !important;
+}
+
+/* Contenido interno de la carta */
+.envelope-section .letter,
+.envelope-section .carta,
+.envelope-section .letter-content {
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    pointer-events: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Barra de desplazamiento */
+.envelope-section .letter::-webkit-scrollbar,
+.envelope-section .carta::-webkit-scrollbar,
+.envelope-section .letter-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.envelope-section .letter::-webkit-scrollbar-thumb,
+.envelope-section .carta::-webkit-scrollbar-thumb,
+.envelope-section .letter-content::-webkit-scrollbar-thumb {
+    background: rgba(80, 50, 40, 0.5);
+    border-radius: 10px;
+}
+
+/* ===== VOLVER AL INICIO ===== */
+
+#volverInicio,
+.volver-inicio {
+    position: relative;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    cursor: pointer;
+}
+/* ===== SCROLL DE LA CARTA ===== */
+
+.envelope-section {
+    overflow: visible !important;
+}
+
+.envelope {
+    overflow: visible !important;
+}
+
+/* Contenido interno de la carta */
+.envelope-section .letter,
+.envelope-section .carta,
+.envelope-section .letter-content {
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    pointer-events: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Barra de desplazamiento */
+.envelope-section .letter::-webkit-scrollbar,
+.envelope-section .carta::-webkit-scrollbar,
+.envelope-section .letter-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.envelope-section .letter::-webkit-scrollbar-thumb,
+.envelope-section .carta::-webkit-scrollbar-thumb,
+.envelope-section .letter-content::-webkit-scrollbar-thumb {
+    background: rgba(80, 50, 40, 0.5);
+    border-radius: 10px;
+}
+
+/* ===== VOLVER AL INICIO ===== */
+
+#volverInicio,
+.volver-inicio {
+    position: relative;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    cursor: pointer;
+}
+/* ===== SCROLL INTERNO DE LA CARTA ===== */
+
+.envelope-section .letter {
+    max-height: 65vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    pointer-events: auto !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+
+/* Barra de scroll */
+.envelope-section .letter::-webkit-scrollbar {
+    width: 8px;
+}
+
+.envelope-section .letter::-webkit-scrollbar-thumb {
+    background: rgba(80, 50, 40, 0.5);
+    border-radius: 10px;
+}
+
+.envelope-section .letter::-webkit-scrollbar-track {
+    background: transparent;
+}
+/* SCROLL INTERNO DE LA CARTA */
+.letter-paper {
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: auto !important;
+}
+/* ===== SCROLL INTERNO DE LA CARTA ===== */
+
+.letter-paper {
+    display: block !important;
+
+    height: 70vh !important;
+    max-height: 70vh !important;
+    min-height: 0 !important;
+
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y !important;
+
+    pointer-events: auto !important;
+}
+
+/* El contenido de la carta también debe permitir el toque */
+.letter-paper * {
+    pointer-events: auto !important;
+}
+
+/* Evita que elementos internos bloqueen el desplazamiento */
+.letter-paper p,
+.letter-paper div,
+.letter-paper span,
+.letter-paper h1,
+.letter-paper h2,
+.letter-paper h3 {
+    touch-action: pan-y !important;
+}
+/* ===== ARREGLO DEFINITIVO: SCROLL INTERNO DE LA CARTA ===== */
+
+.letter-paper {
+    height: 70vh !important;
+    max-height: 70vh !important;
+    min-height: 0 !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+
+    touch-action: pan-y !important;
+    pointer-events: auto !important;
+
+    box-sizing: border-box !important;
+}
+
+/* El contenido de la carta puede recibir el gesto */
+.letter-paper p,
+.letter-paper h1,
+.letter-paper h2,
+.letter-paper h3,
+.letter-paper div,
+.letter-paper span {
+    touch-action: pan-y !important;
+    pointer-events: auto !important;
+}
+
+/* El contenedor de la carta NO debe bloquear el scroll */
+.modal-content {
+    overflow: visible !important;
+    pointer-events: auto !important;
+}
+
+/* El modal sigue permitiendo interacción */
+.photo-modal {
+    pointer-events: auto !important;
+}
+
+.photo-modal.show {
+    pointer-events: auto !important;
+}
+/* ===== SCROLL INTERNO DE LA CARTA ===== */
+
+.letter-paper {
+    overflow: hidden !important;
+    max-height: 70vh !important;
+    height: 70vh !important;
+    pointer-events: auto !important;
+}
+
+.letter-scroll {
+    height: 100% !important;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y !important;
+    pointer-events: auto !important;
+
+    box-sizing: border-box !important;
+    padding-right: 10px;
+}
+/* ===== CARTA COMPLETA SIN SCROLL ===== */
+
+.photo-modal {
+    padding: 15px !important;
+    box-sizing: border-box !important;
+}
+
+.photo-modal .modal-content {
+    max-height: 95vh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+.photo-modal .letter-paper {
+    width: min(90vw, 650px) !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+    padding: clamp(25px, 5vw, 55px) !important;
+}
+
+/* En pantallas pequeñas, hacemos la carta más compacta */
+@media (max-height: 750px) {
+    .photo-modal .letter-paper {
+        padding: 22px !important;
+        font-size: 14px !important;
+    }
+
+    .photo-modal .letter-paper h2 {
+        font-size: 24px !important;
+        margin: 10px 0 !important;
+    }
+
+    .photo-modal .letter-paper p {
+        margin: 8px 0 !important;
+        line-height: 1.35 !important;
+    }
+}
+
+/* En pantallas muy pequeñas */
+@media (max-height: 600px) {
+    .photo-modal .letter-paper {
+        padding: 15px !important;
+        font-size: 12px !important;
+    }
+
+    .photo-modal .letter-paper h2 {
+        font-size: 20px !important;
+    }
+}
+/* ===== CARTA DIRECTA, SIN SOBRE ===== */
+
+.envelope-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+
+.letter-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+
+#letterPaper {
+   .letter-paper {
+    position: relative;
+    width: min(90%, 800px);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow: visible;
+   }}
+   /* QUITAR COMPLETAMENTE EL SOBRE */
+.envelope,
+.envelope-back,
+.envelope-front,
+.envelope-flap,
+.envelope-top,
+.envelope-bottom,
+.envelope-section::before,
+.envelope-section::after {
+    display: none !important;
+}
+
+/* Mostrar la carta directamente */
+.letter-paper {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    margin: 0 auto !important;
+}
+/* ===== CARTA DIRECTAMENTE EN EL ESPACIO BLANCO ===== */
+
+.envelope-section {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    padding: 60px 20px !important;
+    box-sizing: border-box !important;
+}
+
+/* Ocultar completamente el sobre */
+.envelope,
+.envelope-back,
+.envelope-front,
+.envelope-flap,
+.envelope-top,
+.envelope-bottom {
+    display: none !important;
+}
+
+/* Carta */
+.letter-paper {
+    display: block !important;
+    position: relative !important;
+    width: min(850px, 90vw) !important;
+    max-width: 850px !important;
+    height: auto !important;
+    min-height: 600px !important;
+    margin: 0 auto !important;
+    padding: 60px !important;
+    box-sizing: border-box !important;
+
+    background: #faf8f3 !important;
+    overflow: visible !important;
+}
+/* =========================================
+   CARTA EN EL ESPACIO BLANCO
+   ========================================= */
+
+.letter-page {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    padding-top: 50px !important;
+    padding-bottom: 80px !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Ocultar cualquier parte visual del sobre */
+.envelope,
+.envelope-back,
+.envelope-front,
+.envelope-flap,
+.envelope-top,
+.envelope-bottom,
+.envelope-hint {
+    display: none !important;
+}
+
+/* La carta */
+.letter-paper {
+    position: relative !important;
+
+    width: 850px !important;
+    max-width: 85vw !important;
+
+    min-height: 600px !important;
+    height: auto !important;
+
+    margin: 0 auto !important;
+
+    padding: 60px !important;
+    box-sizing: border-box !important;
+
+    background: #faf8f3 !important;
+
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    overflow: visible !important;
+
+    transform: none !important;
+}
+/* =========================================
+   CARTA DENTRO DEL ESPACIO BLANCO
+   ========================================= */
+
+.letter-page {
+    position: relative !important;
+}
+
+/* Colocar la carta directamente dentro del área blanca */
+.letter-paper {
+    position: absolute !important;
+
+    top: 70px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    width: min(850px, 82vw) !important;
+    min-height: 600px !important;
+
+    margin: 0 !important;
+    padding: 55px !important;
+
+    box-sizing: border-box !important;
+
+    background: #faf8f3 !important;
+
+    z-index: 50 !important;
+
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    overflow: visible !important;
+}
+/* ===== HACER VISIBLE LA CARTA ===== */
+
+.letter-page {
+    min-height: 900px !important;
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+.letter-paper {
+    position: absolute !important;
+
+    top: 70px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    z-index: 99999 !important;
+
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    width: min(850px, 82vw) !important;
+    min-height: 600px !important;
+
+    background: #faf8f3 !important;
+
+    color: #3b2a24 !important;
+
+    overflow: visible !important;
+}
+
+/* Asegurar que el contenido también sea visible */
+.letter-paper * {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+/* ===== CARTA DIRECTAMENTE EN EL ESPACIO BLANCO ===== */
+
+.envelope-section {
+    position: relative !important;
+    min-height: 750px !important;
+    padding: 40px 20px 80px !important;
+    display: block !important;
+    overflow: visible !important;
+}
+
+/* Elimina completamente la parte del sobre */
+.envelope-back,
+.envelope-front,
+.envelope-flap,
+.envelope-hint {
+    display: none !important;
+}
+
+/* La carta queda por encima y dentro del espacio blanco */
+.envelope-section .letter-paper {
+    position: relative !important;
+    z-index: 9999 !important;
+
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    width: min(900px, 90%) !important;
+    min-height: 600px !important;
+
+    margin: 0 auto !important;
+
+    background: #fff !important;
+    box-sizing: border-box !important;
+
+    transform: none !important;
+}
+
+/* Asegura que el contenido de la carta también sea visible */
+.envelope-section .letter-paper * {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+/* Quitar el cuadro blanco de la carta */
+.envelope-section .letter-paper {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 20px !important;
+}
+
+/* Mantener solamente el contenido escrito */
+.envelope-section .letter-paper::before,
+.envelope-section .letter-paper::after {
+    display: none !important;
+}
+.envelope-section .letter-paper {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    outline: 0 !important;
+}
+/* ===== QUITAR CUADRO DE LA CARTA ===== */
+
+#letterPaper {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    width: auto !important;
+    min-height: 0 !important;
+
+    padding: 20px !important;
+}
+
+/* Quitar fondos creados por pseudoelementos */
+#letterPaper::before,
+#letterPaper::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Eliminar cualquier fondo de contenedores internos */
+#letterPaper .letter-decoration {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Mantener visible únicamente el contenido */
+#letterPaper p,
+#letterPaper h1,
+#letterPaper h2,
+#letterPaper h3,
+#letterPaper span {
+    background: transparent !important;
+}
